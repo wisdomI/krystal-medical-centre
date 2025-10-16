@@ -130,7 +130,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-xl text-brand-100 leading-relaxed">
-              Get in touch with Krystal Medical Centre. We're here to help with your healthcare needs 
+              Get in touch with Krystal Medical Centre. We&apos;re here to help with your healthcare needs 
               and answer any questions you may have.
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Send us a Message</CardTitle>
                   <p className="text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&apos;ll get back to you as soon as possible.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -270,7 +270,7 @@ export default function ContactPage() {
               Find Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Located in the heart of Magodo, we're easily accessible by car, bus, or taxi.
+              Located in the heart of Magodo, we&apos;re easily accessible by car, bus, or taxi.
             </p>
           </div>
 
@@ -298,7 +298,7 @@ export default function ContactPage() {
                 <CardContent>
                   <ul className="space-y-2 text-gray-600">
                     <li>• Take Magodo Road from Lagos-Ibadan Expressway</li>
-                    <li>• We're located on the right side, opposite the shopping complex</li>
+                    <li>• We&apos;re located on the right side, opposite the shopping complex</li>
                     <li>• Free parking available in our secure parking lot</li>
                     <li>• Disabled parking spaces available</li>
                   </ul>

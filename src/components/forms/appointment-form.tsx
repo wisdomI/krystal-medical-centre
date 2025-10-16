@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from 'lucide-react';
+import { Calendar, User, MessageSquare, CheckCircle } from 'lucide-react';
 
 const appointmentSchema = z.object({
   firstName: z.string().min(2, 'First name must be at least 2 characters'),
@@ -57,13 +57,11 @@ export function AppointmentForm() {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm<AppointmentFormData>({
     resolver: zodResolver(appointmentSchema),
   });
 
-  const selectedDepartment = watch('department');
 
   const onSubmit = async (data: AppointmentFormData) => {
     setIsSubmitting(true);
@@ -135,7 +133,7 @@ export function AppointmentForm() {
       <CardHeader>
         <CardTitle className="text-2xl text-center">Book Your Appointment</CardTitle>
         <p className="text-center text-gray-600">
-          Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.
+          Fill out the form below and we&apos;ll get back to you within 24 hours to confirm your appointment.
         </p>
       </CardHeader>
       <CardContent>

@@ -290,7 +290,7 @@ export default function AboutPage() {
               Visit Our Medical Centre
             </h2>
             <p className="text-xl text-brand-100 mb-8">
-              Located in the heart of Magodo, we're easily accessible and ready to serve you.
+              Located in the heart of Magodo, we&apos;re easily accessible and ready to serve you.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

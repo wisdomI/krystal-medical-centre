@@ -28,9 +28,9 @@ export async function POST(req: NextRequest) {
     const data = blogSchema.parse(body);
     const post = blogStorage.addPost(data);
     return NextResponse.json({ success: true, post }, { status: 201 });
-  } catch (e: any) {
-    if (e?.issues) {
-      return NextResponse.json({ success: false, message: 'Invalid data', errors: e.issues }, { status: 400 });
+  } catch (e: unknown) {
+    if (e && typeof e === 'object' && 'issues' in e) {
+      return NextResponse.json({ success: false, message: 'Invalid data', errors: (e as { issues: unknown }).issues }, { status: 400 });
     }
     return NextResponse.json({ success: false, message: 'Failed to create post' }, { status: 500 });
   }

@@ -25,8 +25,8 @@ export default function AdminBlogsPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.message || 'Failed to load');
       setPosts(data.posts);
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : 'Failed to load posts');
     } finally {
       setLoading(false);
     }

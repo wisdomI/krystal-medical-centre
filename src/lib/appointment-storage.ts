@@ -18,7 +18,7 @@ interface Appointment {
 }
 
 // Server-side storage (in-memory)
-let serverAppointments: Appointment[] = [];
+const serverAppointments: Appointment[] = [];
 
 // Client-side storage key
 const STORAGE_KEY = 'krystal_appointments';

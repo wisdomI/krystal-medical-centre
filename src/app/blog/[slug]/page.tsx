@@ -8,14 +8,15 @@ import { blogStorage } from '@/lib/blog-storage';
 import { Calendar, Clock, User, ArrowLeft, Share2 } from 'lucide-react';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
   const all = [...blogStorage.getAll(), ...staticPosts];
-  const post = all.find(p => p.slug === params.slug);
+  const post = all.find(p => p.slug === slug);
   
   if (!post) {
     return {
@@ -37,9 +38,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
   const all = [...blogStorage.getAll(), ...staticPosts];
-  const post = all.find(p => p.slug === params.slug);
+  const post = all.find(p => p.slug === slug);
   
   if (!post) {
     notFound();

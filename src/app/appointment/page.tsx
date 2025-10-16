@@ -19,7 +19,7 @@ export default function AppointmentPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Schedule your visit with our experienced healthcare professionals. 
-            We'll confirm your appointment within 24 hours.
+            We&apos;ll confirm your appointment within 24 hours.
           </p>
         </div>
 
