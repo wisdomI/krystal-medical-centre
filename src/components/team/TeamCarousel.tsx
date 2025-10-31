@@ -65,6 +65,8 @@ export function TeamCarousel({ teamMembers, autoPlayMs = 4500 }: TeamCarouselPro
                     <ImageWithFallback
                       src={member.image}
                       alt={member.name}
+                      width={300}
+                      height={400}
                       className="w-64 h-80 object-cover rounded-xl mx-auto group-hover:scale-105 transition-transform duration-500"
                       fallbackSrc="/api/placeholder/300/400"
                     />

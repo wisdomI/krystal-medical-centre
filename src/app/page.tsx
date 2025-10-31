@@ -166,6 +166,8 @@ export default function Home() {
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1600&auto=format&fit=crop&crop=faces" 
                   alt="Doctor"
+                  width={800}
+                  height={500}
                   className="w-full h-80 md:h-96 object-cover rounded-2xl"
                   fallbackSrc="/api/placeholder/800/500"
                 />
@@ -334,6 +336,8 @@ export default function Home() {
                 <ImageWithFallback 
                   src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" 
                   alt="Customer testimonial" 
+                  width={400}
+                  height={400}
                   className="w-80 h-80 object-cover rounded-full"
                   fallbackSrc="/api/placeholder/400/400"
                 />
@@ -472,6 +476,8 @@ export default function Home() {
                 <ImageWithFallback 
                   src={post.image} 
                   alt={post.title}
+                  width={400}
+                  height={250}
                   className="w-full h-48 object-cover"
                   fallbackSrc="/api/placeholder/400/250"
                 />
